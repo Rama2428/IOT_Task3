@@ -44,5 +44,18 @@ if(isset($_POST['button5'])){
 <input type='submit' name='button4' value='RIGHT'><br>
 <input type='submit' name='button5' value='BACKWORD'>
 </form>
+ <script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "63e8ba18-9ddd-4773-b3c3-420d0b58b264", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "23e49f2a-c47a-4e73-938a-fe0e8f7bad6a", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
 </body>
 </html>
